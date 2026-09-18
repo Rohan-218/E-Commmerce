@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
-import { assets } from '../assets/assets'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useState } from 'react';
+import { assets } from '../assets/assets';
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   return (
     <div className='flex items-center justify-between pb-2 font-medium'>
@@ -72,7 +72,7 @@ const Navbar = () => {
       </div>
 
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
