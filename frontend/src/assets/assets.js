@@ -56,6 +56,10 @@ import p_img49 from './p_img49.png'
 import p_img50 from './p_img50.png'
 import p_img51 from './p_img51.png'
 import p_img52 from './p_img52.png'
+import p_img53_1 from './p_img53_1.png'
+import p_img53_2 from './p_img53_2.png'
+import p_img53_3 from './p_img53_3.png'
+import p_img53_4 from './p_img53_4.png'
 
 
 import logo from './logo.png'
@@ -103,7 +107,7 @@ export const products = [
         _id: "aaaaa",
         name: "Madrid Oversized T-Shirt - White & Navy",
         description: "Heavy Gauge 100% Bio-washed Cotton, makes the fabric extra soft & silky",
-        price: 1000,
+        price: 1500,
         image: [p_img1_4,p_img1_1,p_img1_2,p_img1_3],
         category: "Men",
         subCategory: "Topwear",
@@ -157,7 +161,7 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["M", "L", "XL"],
         date: 1716622345448,
-        bestseller: true
+        bestseller: false
     },
     {
         _id: "aaaaf",
@@ -169,7 +173,7 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "L", "XL"],
         date: 1716623423448,
-        bestseller: true
+        bestseller: false
     },
     {
         _id: "aaaag",
@@ -721,6 +725,18 @@ export const products = [
         sizes: ["S", "M", "L", "XL"],
         date: 1716668445448,
         bestseller: false
+    },
+    {
+        _id: "aaaca",
+        name: "Single-Breasted Pea Coat with Notched Lapel",
+        description: "A sleek single-breasted blazer featuring a classic notched lapel, structured fit, and clean minimalist design. Perfect for formal occasions, business wear, and smart-casual looks.",
+        price: 4500,
+        image: [p_img53_1, p_img53_2, p_img53_3, p_img53_4],
+        category: "Men",
+        subCategory: "Formalwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716668445448,
+        bestseller: true
     }
 
 ]
