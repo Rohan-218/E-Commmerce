@@ -10,6 +10,7 @@ import Login from './pages/Login';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
         <Route path="/orders" element={<Orders />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      
+      <Footer />
     </div>
   );
 };
