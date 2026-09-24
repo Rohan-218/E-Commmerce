@@ -733,7 +733,7 @@ export const products = [
         price: 4500,
         image: [p_img53_1, p_img53_2, p_img53_3, p_img53_4],
         category: "Men",
-        subCategory: "Formalwear",
+        subCategory: "Formal",
         sizes: ["S", "M", "L", "XL"],
         date: 1716668445448,
         bestseller: true
