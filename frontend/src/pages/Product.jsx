@@ -9,6 +9,7 @@ const Product = () => {
   const { products, currency } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
   const [image, setImage] = useState("");
+  const [size, setSize] = useState("");
 
   const fetchProductData = async () => {
 
@@ -35,11 +36,11 @@ const Product = () => {
           <div className="flex sm:flex-col overflow-x-auto sm:overflow-y-scroll justify-between sm:justify-normal sm:w-[18.7%] w-full">
             {
               productData.image.map((item, index) => (
-                <img onClick={() => setImage(item)} src={item} key={index} alt="Image" className="w-[24%] sm:w-full sm:mb-3 flex-shrink-0 cursor-pointer" />
+                <img onClick={() => setImage(item)} src={item} key={index} alt="Image" className={`w-[24%] sm:w-full ${index === productData.image.length - 1 ? "sm:mb-0" : "sm:mb-4" } flex-shrink-0 cursor-pointer`} />
               ))
             }
           </div>
-          <div className="w-full sm:w-[80%]">
+          <div className="w-full sm:w-[90%] md:w-[86%] lg:w-[80.3%]">
             <img className="w-full h-auto" src={image} alt="P-Image" />
           </div>
         </div>
@@ -57,8 +58,31 @@ const Product = () => {
             </div>
             <p className="mt-5 text-3xl font-medium">{currency}{productData.price}</p>
             <p className="mt-5 text-gray-500 md:w-4/5">{productData.description}</p>
+            <div className="flex flex-col gap-4 my-8">
+              <p>Select Size</p>
+              <div className="flex gap-2">
+                {productData.sizes.map((item, index) => (
+                  <button onClick={() => setSize(item)} className={`border py-2 px-4 bg-gray-100 ${item === size ? "border-orange-500" : ""}`} key={index}>{item}</button>
+                ))}
+              </div>
+            </div>
+            <button className="bg-black text-white px-8 py-3 text-sm active:bg-gray-700">ADD TO CART</button>
+            <hr className="mt-8 sm:w-4/5" />
+            <div className="text-sm text-gray-500 mt-5 flex flex-col gap-1">
+              <p>100% Original product</p>
+              <p>Cash on delivery is available</p>
+              <p>Easy return and exchange policy within 7 days</p>
+            </div>
         </div>
 
+      </div>
+
+      {/* ------- Description & Review Section ------- */}
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews (122)</p>
+        </div>
       </div>
 
     </div>
