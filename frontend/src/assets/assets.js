@@ -756,3 +756,14 @@ export const products = [
     }
    
 ]
+
+// Generate long descriptions for all products
+products.forEach((product) => {
+    product.longDescription = 
+    `   Discover the ${product.name}, designed to bring together everyday comfort and effortless style.
+        Made for ${product.category.toLowerCase()}, this ${product.subCategory.toLowerCase()} piece offers a stylish look that's easy to incorporate into your wardrobe.
+        
+        ${product.description}
+        Available in sizes ${product.sizes.join(", ")}, so you can find the fit that works for you.
+    `;
+});
