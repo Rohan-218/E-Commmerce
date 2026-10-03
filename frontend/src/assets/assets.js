@@ -60,6 +60,10 @@ import p_img53_1 from './p_img53_1.png'
 import p_img53_2 from './p_img53_2.png'
 import p_img53_3 from './p_img53_3.png'
 import p_img53_4 from './p_img53_4.png'
+import p_img54_1 from './p_img54_1.png'
+import p_img54_2 from './p_img54_2.png'
+import p_img54_3 from './p_img54_3.png'
+import p_img54_4 from './p_img54_4.png'
 
 
 import logo from './logo.png'
@@ -107,7 +111,7 @@ export const products = [
         _id: "aaaaa",
         name: "Madrid Oversized T-Shirt - White & Navy",
         description: "Heavy Gauge 100% Bio-washed Cotton, makes the fabric extra soft & silky",
-        price: 1500,
+        price: 1499,
         image: [p_img1_4,p_img1_1,p_img1_2,p_img1_3],
         category: "Men",
         subCategory: "Topwear",
@@ -117,13 +121,13 @@ export const products = [
     },
     {
         _id: "aaaab",
-        name: "Men Round Neck Pure Cotton T-shirt",
-        description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 2000,
+        name: "Oversized T-Shirt - Black & Denim Blue",
+        description: "Heavy Gauge 100% Bio-washed Cotton, makes the fabric extra soft & silky.",
+        price: 1999,
         image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
         category: "Men",
         subCategory: "Topwear",
-        sizes: ["M", "L", "XL"],
+        sizes: ["S", "M", "L", "XL"],
         date: 1716621345448,
         bestseller: true
     },
@@ -149,7 +153,7 @@ export const products = [
         subCategory: "Topwear",
         sizes: ["S", "M", "XXL"],
         date: 1716621345448,
-        bestseller: true
+        bestseller: false
     },
     {
         _id: "aaaae",
@@ -737,6 +741,18 @@ export const products = [
         sizes: ["S", "M", "L", "XL"],
         date: 1716668445448,
         bestseller: true
+    },
+    {
+        _id: "aaacb",
+        name: "Samurai Oversized Hoodie - Off White & Red",
+        description: "Cozy, oversized, and effortlessly stylish—this winter-ready hoodie is made from soft bio-washed cotton with a bold print and full sleeves. ",
+        price: 2599,
+        image: [p_img54_1, p_img54_2, p_img54_3, p_img54_4],
+        category: "Men",
+        subCategory: "Winterwear",
+        sizes: ["M", "L", "XL"],
+        date: 1716668445448,
+        bestseller: true
     }
-
+   
 ]
