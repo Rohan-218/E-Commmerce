@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 import Home from './pages/Home';
 import Collection from './pages/Collection';
@@ -25,6 +26,7 @@ const App = () => {
 
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
+      <ToastContainer />
       <Navbar />
       <SearchBar />
 
