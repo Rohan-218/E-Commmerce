@@ -18,7 +18,6 @@ const Product = () => {
       if (item._id == productId) {
         setProductData(item);
         setImage(item.image[0]);
-        // setSize(item.sizes[0]);
       }
     });
 
