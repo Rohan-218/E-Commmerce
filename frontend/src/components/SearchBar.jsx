@@ -101,7 +101,7 @@ const SearchBar = () => {
       {(!search || isCollectionPage) && (
         <div className="flex justify-center items-center gap-5 pb-5 pt-3 text-sm">
           <span className="text-gray-500">Popular Searches:</span>
-          <span onClick={() => setSearch("Oversized T Shirt")} className="underline cursor-pointer">Oversized T Shirt</span>
+          <span onClick={() => setSearch("Oversized T Shirt")} className="underline cursor-pointer">Oversized T-Shirt</span>
           <span onClick={() => setSearch("Joggers")} className="underline cursor-pointer">Joggers</span>
         </div>
       )}
