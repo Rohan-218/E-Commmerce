@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import Home from './pages/Home';
 import Collection from './pages/Collection';
-import PlaceOrder from './pages/PLaceOrder';
+import PlaceOrder from './pages/PlaceOrder';
 import Orders from './pages/Orders';
 import About from './pages/About';
 import Contact from './pages/Contact';

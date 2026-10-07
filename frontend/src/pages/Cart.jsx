@@ -2,10 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
 import { assets } from '../assets/assets';
+import CartTotal from '../components/cartTotal';
 
 const Cart = () => {
 
-  const { products, currency, cartItems, updateQuantity } = useContext(ShopContext);
+  const { products, currency, cartItems, updateQuantity, navigate } = useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
 
@@ -23,6 +24,7 @@ const Cart = () => {
         }
       }
     }
+    console.log(tempData)
     setCartData(tempData);
 
   },[cartItems])
@@ -52,13 +54,32 @@ const Cart = () => {
                     </div>
                   </div>
                 </div>
-                <input onClick={(e) => e.target.value === "" || e.target.value === "0" ? null : updateQuantity(item._id, item.size, Number(e.target.value))} className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1" type="number" min="1" defaultValue={item.quantity} onChange={(e) => updateQuantity(item._id, item.size, parseInt(e.target.value))} />
+                <input
+                  className="border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1"
+                  type="number"
+                  min="1"
+                  defaultValue={item.quantity}
+                  onBlur={(e) => {
+                    const quantity = Number(e.target.value);
+                    if (!quantity || quantity < 1) e.target.value = item.quantity;
+                    else updateQuantity(item._id, item.size, quantity);
+                  }}
+                />
                 <img onClick={() => updateQuantity(item._id, item.size, 0)} className="w-4 mr-4 sm:w-5 cursor-pointer" src={assets.bin_icon} alt="bin" />
               </ div>
             )
 
           })
         }
+      </div>
+
+      <div className="flex justify-end my-20">
+        <div className="w-full sm:w-[450px]">
+          <CartTotal />
+          <div className="w-full text-end">
+            <button onClick={() => navigate('/place-order')} className="bg-black text-white text-sm my-8 px-8 py-3">PROCEED TO CHECKOUT</button>
+          </div>
+        </div>
       </div>
       
     </div>
