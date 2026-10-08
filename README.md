@@ -1,119 +1,59 @@
-````markdown
-# Fluke (E-Com)
+# Fluke (E-Com) — Static UI
 
-Fluke is a modern e-commerce storefront built with React and Vite. It is designed to showcase products, manage shopping cart behavior, and provide a clean foundation for a checkout experience.
+This `static-ui` branch contains the static frontend for the Fluke e-commerce project. It includes the React user interface and its static assets and is intended to be deployed as a static website.
 
-## Overview
+There is no backend, API, or database in this branch. The frontend does not provide server-side authentication, order processing, or other backend services; UI flows that would require those services are not connected to a backend.
 
-This project focuses on:
-- Responsive product browsing
-- Product detail views
-- Shopping cart interactions
-- Checkout flow foundation
-- Clean, scalable frontend structure
+## Tech stack
 
-## Tech Stack
+- React
+- Vite
+- JavaScript
+- CSS and static assets
+- npm
 
-- Frontend: React + Vite
-- Language: JavaScript
-- Styling: CSS
-- Package manager: npm
-
-## Project Structure
+## Project structure
 
 ```text
-Fluke (E-Com)/
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   ├── .eslintrc*
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   └── README.md
-├── .gitignore
-├── README.md
-└── package.json
+frontend/
+├── public/       # Public static files
+├── src/
+│   ├── assets/   # Images and other frontend assets
+│   ├── components/
+│   ├── context/
+│   └── pages/
+├── index.html
+├── package.json
+└── vite.config.js
 ```
 
-## Prerequisites
+## Run locally
 
-Before running the app, make sure you have:
-- Node.js 18 or later
-- npm 9 or later
+Requirements: Node.js 18 or later and npm 9 or later.
 
-## Getting Started
-
-1. Open a terminal in the project root
-2. Navigate to the frontend app:
 ```bash
 cd frontend
-```
-
-3. Install dependencies:
-```bash
 npm install
-```
-
-4. Start the development server:
-```bash
 npm run dev
 ```
 
-The app should open in the browser at the local Vite URL, usually:
-- http://localhost:5173
+Vite prints the local URL when the development server starts (usually http://localhost:5173).
 
-## Available Scripts
+## Available scripts
 
-Inside the `frontend` folder:
+Run these from the `frontend` directory:
 
 ```bash
-npm run dev      # Start the Vite dev server
-npm run build    # Create a production build
-npm run preview  # Preview the built app
-npm run lint     # Run ESLint checks
+npm run dev      # Start the development server
+npm run build    # Build the static site into frontend/dist
+npm run preview  # Preview the production build locally
+npm run lint     # Run ESLint
 ```
 
-## Environment Variables
+## Deploy
 
-If the app needs API configuration, create a `.env` file inside `frontend/`:
+Build the site with `npm run build` from `frontend`, then deploy the generated `frontend/dist` directory to a static hosting provider such as Netlify, Vercel, or GitHub Pages. No backend deployment or API environment variables are required for this branch.
 
-```env
-VITE_API_URL=http://localhost:5000
-```
+## Live site
 
-## Features
-
-Current and planned features include:
-- Product catalog
-- Search and filtering
-- Shopping cart
-- Checkout flow
-- Responsive layout
-- Backend integration support
-
-## Development Notes
-
-- Keep components modular and reusable
-- Separate business logic from UI where possible
-- Use environment variables for API configuration
-- Follow consistent naming and folder conventions
-
-## Deployment
-
-To deploy the app:
-```bash
-cd frontend
-npm run build
-```
-
-Then publish the generated `dist` folder to a static hosting platform such as Vercel, Netlify, or GitHub Pages.
-
-## License
-
-This project does not currently have a license assigned.
-
-## Notes
-
-This repository currently focuses on the frontend storefront. Additional features such as a backend API, authentication, and database support can be added as the project grows.
-````
+Vercel deployment: [Add the live site URL here](https://your-project.vercel.app)
