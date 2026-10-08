@@ -12,6 +12,16 @@ This project focuses on:
 - Checkout flow foundation
 - Clean, scalable frontend structure
 
+## Git Branches and Deployments
+
+The branches separate the frontend, backend, and standalone static storefront:
+
+| Branch | Purpose |
+| --- | --- |
+| `dev` | Frontend development with the application server. |
+| `server-dev` | Backend development. |
+| `static-ui` | Static frontend with its assets. This version does not require a backend and is deployed on Render at [e-commerce-45b1.onrender.com](https://e-commerce-45b1.onrender.com). |
+
 ## Tech Stack
 
 - Frontend: React + Vite
