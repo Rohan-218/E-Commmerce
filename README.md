@@ -56,4 +56,4 @@ Build the site with `npm run build` from `frontend`, then deploy the generated `
 
 ## Live site
 
-Vercel deployment: [Add the live site URL here](https://your-project.vercel.app)
+Live site: [https://e-commerce-45b1.onrender.com](https://e-commerce-45b1.onrender.com)
